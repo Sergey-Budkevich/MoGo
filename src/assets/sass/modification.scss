@@ -1,0 +1,22 @@
+//font
+$mon:'Montserrat', sans-serif;
+$ral:'Raleway', sans-serif;
+$kau:'Kaushan Script', cursive;
+$fsz:14px;
+$lh:18px;
+$fw:400;
+$fst:normal;
+$td:none;
+
+//colors
+$col1:#2D3033;
+$col2:#000000;
+
+@mixin fontz($ral,$fst,$fw,$fsz,$lh,$col1) {
+    font-family:$ral;
+    font-style: $fst;
+    font-weight: $fw;
+    font-size: $fsz;
+    line-height: $lh;
+    color: $col1;
+}

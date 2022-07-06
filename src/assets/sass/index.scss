@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@700&family=Raleway:wght@400;500;600;700&display=swap');
+@import "header.scss";
+@import "welcome.scss";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+.content{
+    max-width: calc(1170px + 16px * 2);
+    width: 100%;
+    padding: 0 16px;
+    margin: 0 auto;
+}
+
+
+

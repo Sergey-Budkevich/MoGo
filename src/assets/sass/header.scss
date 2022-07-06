@@ -1,0 +1,59 @@
+@import "modification.scss";
+
+.header{
+    width: 100%;
+    position: fixed;
+    background-color: transparent;
+    z-index: 999;
+    .header__container{
+        height: 100px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        .header__navigation{
+            justify-self: end;
+            .header__navigation-items{
+                display: flex;
+                align-items: center;
+                .header__navigation-item{
+                    margin: 0 0 0 25px;
+                    &:not(:last-child){
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                    
+                        .header__navigation-link{
+                            margin: 0 15px 5px;
+                            @include fontz($ral,$fst,600,$fsz,16px,#FFF);
+                            text-transform: capitalize;
+                            &:hover ~ .header__navigation-border{
+                                width: 100%;
+                                height: 1px;
+                                background-color: #F4BF87;
+                                transition-duration: 0.4s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .header__button_search{
+            margin: 0 0 0 30px;
+            background-color:transparent;
+            border: none;
+        }
+    }
+}
+.header__content{
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+

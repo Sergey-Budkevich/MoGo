@@ -1,0 +1,89 @@
+@import "modification.scss";
+
+
+.welcome{
+    min-height: 100vh;
+    padding: 185px 0 20px;
+    background-image: url("../images/welcome_bg.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    position: relative;
+    &:after{
+        content:"";
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .welcome__content{
+        position: relative;
+        z-index: 2;
+        .welcome__conteiner{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .welcome__subtitle{
+                @include fontz($kau,$fst,400,64px,93px,#FFF);
+                text-align: center;
+            }
+            .welcome__title{
+                @include fontz($mon,$fst,700,144px,176px,#FFF);
+                text-align: center;
+                text-transform: uppercase;
+            }
+            .welcome__line{
+                margin: 50px 0 0 ;
+                width: 170px;
+                height: 4px;
+                background-color: #FFF;
+            }
+            .welcome__button{
+                margin: 75px 0 0;
+                width: 370px;
+                padding: 22px 0;
+                @include fontz($ral,$fst,700,24px,28px,#FFF);
+                background-color: transparent;
+                border: 4px solid #FFF;
+                text-transform: uppercase;
+            }
+            .welcome__progress{
+                width: 100%;
+                margin: 115px 0 0;
+                display: flex;
+                justify-content: space-between;
+                column-gap: 30px;
+                .welcome__progress-column{
+                    max-width: 270px;
+                    width: 100%;
+                    .progress-column__line{
+                        width: 100%;
+                        height: 4px;
+                        background-color: #fff;
+                        .progress-column__line--red{
+                            background-color: #F38281;
+                            width: 31.5%;
+                            height: 100%;
+                        }
+                    }
+                    .progress-column__text{
+                        margin: 20px 0 0;
+                        text-transform: uppercase;
+                        @include fontz($ral,$fst,500,18px,21px,#FFF);
+                        >span{
+                            @include fontz($ral,$fst,700,36px,42px,#FFF);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
