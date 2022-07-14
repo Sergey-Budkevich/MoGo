@@ -14,41 +14,47 @@
         width: 100%;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         row-gap:21px;
         .skills__card{
-            padding: 24px 14px 24px 18px;
+//            padding: 24px 14px 24px 18px;
             border: 1px solid #C6CBCD;
             width: 100%;
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            &:first-child{
-                border: none;
+            flex-direction: column;
+            .card__top{
+                padding: 25px 14px 25px 18px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .skills__card-title{
+                    @include fontz($ral, $fst, 700, 24px, 28px, $col1);
+                    text-transform: uppercase;
+                    max-width: 370px;
+                    width: 100%;
+                }
+                .skills__card-icon{
+                    flex-shrink: 0;
+                }
+                .skills__card-button{
+                    border: none;
+                    background-color: transparent;
+                    &:focus .skills__card-button-icon--arrow {
+                        transform: rotate(180deg);
+                    }
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
             }
-            .skills__card-title{
-                @include fontz($ral, $fst, 700, 24px, 28px, $col1);
-                text-transform: uppercase;
-                max-width: 370px;
-                width: 100%;
-            }
-            .skills__card-button{
-                border: none;
-                background-color: transparent;
-            }
-            .skills__card-icon{
-                flex-shrink: 0;
-            }
-        }
-        .skills__card--active{
-            border: 1px solid #C6CBCD;
             .skills__card-description{
-                padding: 0 24px 0 22px;
+                padding: 13px 22px;
                 border-top: 1px solid #C6CBCD;
                 .skills__card-text{
                     @include fontz($ral, $fst, 400, 18px, 21px, $col1);
-                    max-height: 163px;
+                    max-height: 135px;
                     overflow: auto;
-                    padding: 13px 54px 13px 0;
+                    padding: 0 54px 0 0;
                     &::-webkit-scrollbar{
                         width: 7px;
                     }
@@ -59,9 +65,9 @@
                         background-color: #95E1D3;
                     }
                 }
+                
             }
         }
     }
 }
-
 
