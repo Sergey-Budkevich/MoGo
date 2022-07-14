@@ -1,0 +1,36 @@
+@import "modification.scss";
+
+
+.services{
+    padding: 60px 0 90px;
+    .services__cards{
+        margin: 80px 0 0;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 140px;
+        .services__card{
+            display: flex;
+            column-gap: 30px;
+            .services__card-icon{
+                flex-shrink: 0;
+            }
+            .services__card-description{
+                display: flex;
+                flex-direction: column;
+                .services__card-title{
+                    margin: 11px 0 0;
+                    @include fontz($ral, $fst, 700, 24px, 28px, $col1);
+                }
+                .services__card-text{
+                    margin: 30px 0 0;
+                    @include fontz($ral, $fst, 400, 18px, 21px, $col1);
+                }
+            }
+        }
+    }
+}
+
+
+
+

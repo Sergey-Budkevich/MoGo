@@ -1,0 +1,72 @@
+@import "modification.scss";
+
+.about{
+    padding: 60px 0 110px;
+    .about__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .about__cards{
+            margin: 100px 0 0;
+            width: 100%;
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            column-gap:30px;
+            .about__card{
+                position: relative;
+                max-width: 33%;
+                width: 100%;
+                .about__card-img{
+                    object-fit: cover;
+                    width: 100%;
+                }
+                &:hover .about__card-link{
+                    opacity: 1;
+                    top: -15px;
+                    left: -15px;
+                    transition-duration: 0.4s;
+                }
+                &:hover {
+                    background-color: #95E1D3;
+                }
+                &:hover .about__card-img{
+                    opacity: 0;
+                    
+                }
+                .about__card-link{
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%);
+                    opacity: 0;
+                    >span{
+                        margin: 35px 0 0 ;
+                        @include fontz($ral, $fst, 500, 24px, 28px, #FFF);
+                        text-align: center;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+@import "modification.scss";
+
+.design{
+    padding: 60px 0;
+    background-image: url("../images/design_bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    &::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.8);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .design__content{
+        position: relative;
+        z-index: 100;
+        .design__image--tablet{
+            margin: 60px 0 0;    
+//            text-align: center; 
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            display: inline-block;
+            
+            &::after{
+                    content: "";
+                    width: 200px;
+                    height: 411px;
+                    background-image: url(../images/design_phone.png);
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    background-size: cover;
+                    background-position: center;
+                    top: 212px;
+                    right: -37px;
+                    z-index: 999;
+                }
+            >img{
+                border-radius: 30px;
+                max-width: 100%;
+            }
+        } 
+    }
+}
+
+
+
+
