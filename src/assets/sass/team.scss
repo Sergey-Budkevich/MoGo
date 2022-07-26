@@ -1,0 +1,59 @@
+@import "modification.scss";
+
+
+.team{
+    padding: 100px 0 85px;
+    .team__cards{
+        margin: 100px 0 0;
+        display: flex;
+        justify-content: space-between;
+        column-gap: 30px;
+        .team__card{
+            max-width: 33%;
+            width: 100%;
+            .team__card-inner{
+                position: relative;
+                .team__card-image{
+                    object-fit: cover;
+                }
+                .team__card-pop-up{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%);
+                    opacity: 0;
+                    .card-pop-up__link:not(:last-child){
+                        margin: 0 2px 0 0;
+                    }
+                    .card-pop-up__link:hover {
+                        transform: scale(1.2);
+                        transition-duration: 0.4s;
+                    }
+                }
+                &:hover .team__card-pop-up{
+                    opacity: 1;
+                    left: -16px;
+                    top: -16px;
+                    transition-duration: 0.4s;
+                }
+            }
+            .team__card-title{
+                margin: 25px 0 0;
+                @include fontz($ral, $fst, 700, 24px, 28px,$col1);
+                text-transform: uppercase;
+                text-align: center;
+            }
+            .team__card-subtitle{
+                margin: 25px 0 0;
+                @include fontz($ral, $fst, 400, 18px, 21px,$col1);
+                text-transform: uppercase;
+                text-align: center;
+            }
+        }
+    }
+}

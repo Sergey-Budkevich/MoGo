@@ -1,0 +1,70 @@
+@import "modification.scss";
+
+.works{
+    padding: 100px 0 85px;
+    .works__container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(2,1fr);
+        .works__box{
+            position: relative;
+            &:hover .works__box-link{
+                opacity: 1;
+                transition-duration: 0.4s;
+            }
+            .works__box-link{
+                position: absolute;
+                top:0;
+                left:0;
+                width: 100%;
+                height: calc(100% - 4px);
+                z-index: 1;
+                opacity: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%);
+                .works__box-link-title{
+                    margin: 55px 0 0;
+                    @include fontz($ral, $fst, 700, 24px, 28px,#FFFFFF);
+                    text-transform: uppercase;
+                }
+                .works__box-link-text{
+                    margin: 10px 0 0;
+                    @include fontz($ral, $fst, 400, 18px, 21px,#FFFFFF);
+                }
+            }
+            &:not(:nth-child(3)){
+                .works__box-image{
+                    aspect-ratio: 1/1;
+                    width: 100%;
+                }
+                
+            }
+            &:nth-child(3){
+                grid-column: 3/4;
+                grid-row: 1/3;
+                .works__box-link{
+                    height: calc(100% - 8px);
+                }
+                .works__box-image{
+                    aspect-ratio: 1/2;
+                    width: 100%;
+                }
+            }
+            &:nth-child(5){
+                position: relative;
+                top: -5px;
+            }
+            &:nth-child(6){
+                position: relative;
+                top: -5px;
+            }
+            &:nth-child(7){
+                position: relative;
+                top: -5px;
+            }
+        }
+    }
+}

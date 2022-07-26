@@ -1,0 +1,11 @@
+@import "modification.scss";
+
+.label{
+    padding: 40px 0;
+    background-color: #F8F8F8;
+    .label__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
