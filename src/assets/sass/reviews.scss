@@ -1,0 +1,61 @@
+@import "modification.scss";
+
+.reviews{
+    padding: 60px 0;
+    background-image: url('/src/assets/images/reviews__bg.png');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color:rgba(255, 255, 255, 0.9);
+    }
+    .reviews__content{
+        position: relative;
+        z-index: 999;
+    }
+    .reviews__cards{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: (2,1fr);
+        column-gap: 50px;
+        row-gap: 50px;
+        margin: 40px 0 0;
+        .reviews__card-box{
+            display: flex;
+            justify-content: space-between;
+            align-items:stretch ;
+            column-gap: 50px;
+            .reviews__card-box-image{
+                margin: 12px 0 0;
+            }
+            .card-box-description{
+                display: flex;
+                flex-direction: column;
+                .card-box-description__name{
+                    margin: 12px 0 0 ;
+                    @include fontz($ral,$fst ,700,24px,28px,$col1);
+                    text-transform: uppercase;
+                }
+                .card-box-description__post{
+                    margin: 12px 0 0 ;
+                    @include fontz($ral,$fst ,400,18px,21px,$col1);
+                    text-transform: uppercase;
+                }
+                > .card-box-description__line{
+                    margin: 32px 0 0;
+                    width: 70px;
+                }
+                .card-box-description__text{
+                    margin: 45px 0 0 ;
+                    @include fontz($ral,$fst ,400,18px,21px,$col1);
+                }
+            }
+        }
+    }
+}
